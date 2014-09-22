@@ -1,4 +1,5 @@
 Based on http://www.rabbitmq.com/getstarted.html
+Examples 5_1-5_3 are different variations for Topics
 
 1. Basic "Hello wold" example
 
