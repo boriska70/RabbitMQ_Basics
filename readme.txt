@@ -30,7 +30,7 @@ Examples 5_1-5_3 are different variations for Topics
 - Each consumer receives the message only once, even if it fits multiple bindings
 - Still no message acknowledges and durability
 
-5.1. Topic - more complex one (unnecessary complexity, actually)
+5.1. More complex topic - e2e binding, transactions usage (commented out), Publisher Confirm
 - All connected consumers receive all messages (no queue share between customer)
 - Multiple criteria and multiple binding
 - Not receiving the messages that came before it started
@@ -38,6 +38,8 @@ Examples 5_1-5_3 are different variations for Topics
 - Each consumer receives the message only once, even if it fits multiple bindings
 - exchange2exchange binding
 - Explicit message acknowledge
+- Commented out option of using transaction in Sender - very strict guaranteed delivery, which is very heavy also: each publish is blocking until RabbitMQ will handle it AND it includes fsync for each message
+- Publisher Confirm (http://www.rabbitmq.com/blog/2011/02/10/introducing-publisher-confirms/)
 
 5.2 Mix of topic and queue
 - Only 1 consumer receive messages since all of them share the same queue (by name)
