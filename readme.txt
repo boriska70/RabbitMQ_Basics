@@ -12,17 +12,20 @@ Examples 5_1-5_3 are different variations for Topics
   If no free consumers, keep the messages in the queue until one of consumers becomes ready
 
 3. Publish/Subscribe
+- Fanout exchange
 - All connected consumers receieve all messages
 - Messages sent to exchange; queues only created when consumers connect (per consumer)
 - In this example - messages discarded, if no queues exist (i.e., no consumers connected)
 
 4. Routing (single criteria binding for pub/sub)
+- Direct exchange
 - All connected consumers receieve all messages
 - Single criteria but multiple binding allowed
 - Pub/Sub similar to the previous one but bound separately for routing key hello and bye, i.e., double bounding
 - Still no message acknowledges and durability
 
 5. Topic (pub/sub with multiple criteria)
+- Topic exchange
 - All connected consumers receive all messages (no queue share between customer)
 - Multiple criteria and multiple binding
 - Not receiving the messages that came before it started
